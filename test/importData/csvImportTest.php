@@ -16,7 +16,7 @@ class csvImportTest extends PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new csvImport("file.csv");
+        $this->object = new csvImport(__DIR__."/"."file.csv");
     }
 
     /**
@@ -58,9 +58,10 @@ class csvImportTest extends PHPUnit_Framework_TestCase
     public function testCountRecords()
     {
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->assertEquals(7,  $this->object->countRecords());
+//        $this->markTestIncomplete(
+//            'This test has not been implemented yet.'
+//        );
     }
 
     /**
@@ -70,8 +71,11 @@ class csvImportTest extends PHPUnit_Framework_TestCase
     public function testGetFieldNames()
     {
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->assertEquals([],  $this->object->getFieldNames()); 
+        
+//        $this->markTestIncomplete(
+//            'This test has not been implemented yet.'
+//        );
+        
     }
 }
