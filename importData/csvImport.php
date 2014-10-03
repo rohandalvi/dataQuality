@@ -21,15 +21,18 @@ class csvImport {
             $this->nameFile = $filename;
             $this->fileObject = file($filename);
             $this->csv = new parseCSV($filename);
-            $this->csv->delimiter = "\t";
+            $this->csv->delimiter = "\t"; //set tab space as delimiter for csv
 //                           
         } else {
             die("File not found, make sure the file is at " . __FILE__);
         }
     }
 
-    function __destruct() {
-        
+    public function __destruct() {
+        $this->nameFile = null;
+        $this->dataArray = [];
+        $this->fileObject=null;
+        $this->csv=null;
     }
 
     public function readCSV($filename, $optional_var) {
@@ -45,12 +48,16 @@ class csvImport {
     }
 
     //returns field names at the top in an array.
+    /*
+     * The field names can be accessed as for example, $returnArray[0]...[1]..[2]..etc
+     * Obviously, count($returnArray) will provide the number of fields.
+     */
     public function getFieldNames() {
        if(count($this->dataArray)==0){
             $this->readCSV($this->nameFile, null);
         }
         $returnArray = array_keys($this->dataArray[0]);
-        echo "Accelero ".$returnArray[0];
+        
         return $returnArray;
         
     }
