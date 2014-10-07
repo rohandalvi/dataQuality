@@ -61,6 +61,12 @@ class csvImport {
         return $returnArray;
         
     }
+    
+    public function getCSVData(){
+        if($this->dataArray==null) $this->readCSV ($filename, null);
+        
+        return $this->dataArray;
+    }
 
 }
 ?>

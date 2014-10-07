@@ -70,11 +70,6 @@ class csvImportTest extends PHPUnit_Framework_TestCase
     public function testGetFieldNames()
     {
         // Remove the following lines when you implement this test.
-        $this->assertEquals(9,  count($this->object->getFieldNames())); 
-        
-//        $this->markTestIncomplete(
-//            'This test has not been implemented yet.'
-//        );
-        
+        $this->assertEquals(9,  count($this->object->getFieldNames()));    
     }
 }

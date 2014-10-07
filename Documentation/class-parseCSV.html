@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class parseCSV | dataQuality</title>
+
+	<script type="text/javascript" src="resources/combined.js?3802555028"></script>
+	<script type="text/javascript" src="elementlist.js?1779404248"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Accerlerometer.html">Accerlerometer</a></li>
+				<li><a href="class-AccerlerometerTest.html">AccerlerometerTest</a></li>
+				<li><a href="class-construct_methods_Test.html">construct_methods_Test</a></li>
+				<li><a href="class-csvImport.html">csvImport</a></li>
+				<li><a href="class-csvImportTest.html">csvImportTest</a></li>
+				<li><a href="class-Data.html">Data</a></li>
+				<li><a href="class-DataTest.html">DataTest</a></li>
+				<li><a href="class-default_values_properties_Test.html">default_values_properties_Test</a></li>
+				<li><a href="class-Helper.html">Helper</a></li>
+				<li><a href="class-HelperTest.html">HelperTest</a></li>
+				<li class="active"><a href="class-parseCSV.html">parseCSV</a></li>
+				<li><a href="class-Sensor.html">Sensor</a></li>
+				<li><a href="class-SensorTest.html">SensorTest</a></li>
+				<li><a href="class-worthless_properties_Test.html">worthless_properties_Test</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class parseCSV</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+		<b>Located at</b> <a href="source-class-parseCSV.html#3-1193" title="Go to source code">importData/parsecsv-for-php/parsecsv.lib.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-parseCSV.html#343-373" title="Go to source code">__construct</a>( <span>[string] <var>$input</var> = <span class="php-keyword1">null</span></span>, <span>[integer] <var>$offset</var> = <span class="php-keyword1">null</span></span>, <span>[integer] <var>$limit</var> = <span class="php-keyword1">null</span></span>, <span>[string] <var>$conditions</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$keep_file_data</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor Class constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor Class constructor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code>[string]</code><br>input The CSV string or a direct filepath</dd>
+					<dt><var>$offset</var></dt>
+					<dd><code>[integer]</code><br>offset Number of rows to ignore from the beginning of the data</dd>
+					<dt><var>$limit</var></dt>
+					<dd><code>[integer]</code><br>limit Limits the number of returned rows to specified amount</dd>
+					<dt><var>$conditions</var></dt>
+					<dd><code>[string]</code><br>conditions Basic SQL-like conditions for row matching</dd>
+					<dt><var>$keep_file_data</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			 public 
+			[bool]
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code><a href="source-class-parseCSV.html#381-425" title="Go to source code">parse</a>( <span>[string] <var>$input</var> = <span class="php-keyword1">null</span></span>, <span>[integer] <var>$offset</var> = <span class="php-keyword1">null</span></span>, <span>[integer] <var>$limit</var> = <span class="php-keyword1">null</span></span>, <span>[string] <var>$conditions</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Parse Parse a CSV file or string</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parse Parse a CSV file or string</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code>[string]</code><br>input The CSV string or a direct filepath</dd>
+					<dt><var>$offset</var></dt>
+					<dd><code>[integer]</code><br>offset Number of rows to ignore from the beginning of the data</dd>
+					<dt><var>$limit</var></dt>
+					<dd><code>[integer]</code><br>limit Limits the number of returned rows to specified amount</dd>
+					<dt><var>$conditions</var></dt>
+					<dd><code>[string]</code><br>conditions Basic SQL-like conditions for row matching</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>[bool]</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			 public 
+			[bool]
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code><a href="source-class-parseCSV.html#427-448" title="Go to source code">save</a>( <span>[string] <var>$file</var> = <span class="php-keyword1">null</span></span>, <span>[array] <var>$data</var> = <span class="php-keyword1">array</span>()</span>, <span>[bool] <var>$append</var> = <span class="php-keyword1">false</span></span>, <span>[array] <var>$fields</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Save Save changes, or write a new file and/or data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Save Save changes, or write a new file and/or data</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>[string]</code><br>$file File location to save to</dd>
+					<dt><var>$data</var></dt>
+					<dd><code>[array]</code><br>$data 2D array of data</dd>
+					<dt><var>$append</var></dt>
+					<dd><code>[bool]</code><br>$append Append current data to end of target CSV, if file exists</dd>
+					<dt><var>$fields</var></dt>
+					<dd><code>[array]</code><br>$fields Field names</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>[bool]</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="output" id="_output">
+
+		<td class="attributes"><code>
+			 public 
+			[string]
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_output">#</a>
+		<code><a href="source-class-parseCSV.html#450-485" title="Go to source code">output</a>( <span>[string] <var>$filename</var> = <span class="php-keyword1">null</span></span>, <span>[array] <var>$data</var> = <span class="php-keyword1">array</span>()</span>, <span>[array] <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>[type] <var>$delimiter</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Output Generate a CSV based string for output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Output Generate a CSV based string for output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filename</var></dt>
+					<dd><code>[string]</code><br>$filename If specified, headers and data will be output directly to browser as a
+downloable file</dd>
+					<dt><var>$data</var></dt>
+					<dd><code>[array]</code><br>$data 2D array with data</dd>
+					<dt><var>$fields</var></dt>
+					<dd><code>[array]</code><br>$fields Field names</dd>
+					<dt><var>$delimiter</var></dt>
+					<dd><code>[type]</code><br>$delimiter delimiter used to separate data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>[string]</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="encoding" id="_encoding">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_encoding">#</a>
+		<code><a href="source-class-parseCSV.html#487-504" title="Go to source code">encoding</a>( <span>[string] <var>$input</var> = <span class="php-keyword1">null</span></span>, <span>[string] <var>$output</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Encoding Convert character encoding</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Encoding Convert character encoding</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code>[string]</code><br>$input Input character encoding, uses default if left blank</dd>
+					<dt><var>$output</var></dt>
+					<dd><code>[string]</code><br>$output Output character encoding, uses default if left blank</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="auto" id="_auto">
+
+		<td class="attributes"><code>
+			 public 
+			[string]
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_auto">#</a>
+		<code><a href="source-class-parseCSV.html#506-614" title="Go to source code">auto</a>( <span>[string] <var>$file</var> = <span class="php-keyword1">null</span></span>, <span>[bool] <var>$parse</var> = <span class="php-keyword1">true</span></span>, <span>[int] <var>$search_depth</var> = <span class="php-keyword1">null</span></span>, <span>[string] <var>$preferred</var> = <span class="php-keyword1">null</span></span>, <span>[string] <var>$enclosure</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Auto Auto-Detect Delimiter: Find delimiter by analyzing a specific number of
+rows to determine most probable delimiter character</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Auto Auto-Detect Delimiter: Find delimiter by analyzing a specific number of
+rows to determine most probable delimiter character</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>[string]</code><br>$file Local CSV file</dd>
+					<dt><var>$parse</var></dt>
+					<dd><code>[bool]</code><br>$parse True/false parse file directly</dd>
+					<dt><var>$search_depth</var></dt>
+					<dd><code>[int]</code><br>$search_depth Number of rows to analyze</dd>
+					<dt><var>$preferred</var></dt>
+					<dd><code>[string]</code><br>$preferred Preferred delimiter characters</dd>
+					<dt><var>$enclosure</var></dt>
+					<dd><code>[string]</code><br>$enclosure Enclosure character, default is double quote (").</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>[string]</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse_file" id="_parse_file">
+
+		<td class="attributes"><code>
+			 public 
+			[array|bool]
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse_file">#</a>
+		<code><a href="source-class-parseCSV.html#621-641" title="Go to source code">parse_file</a>( <span>[string] <var>$file</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Parse File Read file to string and call parse_string()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parse File Read file to string and call parse_string()</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>[string]</code><br>$file Local CSV file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>[array|bool]</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse_string" id="_parse_string">
+
+		<td class="attributes"><code>
+			 public 
+			2D
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse_string">#</a>
+		<code><a href="source-class-parseCSV.html#643-821" title="Go to source code">parse_string</a>( <span><code><a href="class-parseCSV.html#$data">parseCSV::<var>$data</var></a></code> <var>$data</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Parse CSV strings to arrays</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parse CSV strings to arrays</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code><code><a href="class-parseCSV.html#$data">parseCSV::<var>$data</var></a></code></code><br>CSV string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>2D</code><br>array with CSV data, or false on failure<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unparse" id="_unparse">
+
+		<td class="attributes"><code>
+			 public 
+			CSV
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unparse">#</a>
+		<code><a href="source-class-parseCSV.html#823-873" title="Go to source code">unparse</a>( <span><code><a href="class-parseCSV.html#$data">parseCSV::<var>$data</var></a></code> <var>$data</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-parseCSV.html#$fields">parseCSV::<var>$fields</var></a></code> <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>append <var>$append</var> = <span class="php-keyword1">false</span> </span>, <span>is_php <var>$is_php</var> = <span class="php-keyword1">false</span></span>, <span><code><a href="class-parseCSV.html#$delimiter">parseCSV::<var>$delimiter</var></a></code> <var>$delimiter</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Create CSV data from array</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create CSV data from array</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code><code><a href="class-parseCSV.html#$data">parseCSV::<var>$data</var></a></code></code><br>2D array with data</dd>
+					<dt><var>$fields</var></dt>
+					<dd><code><code><a href="class-parseCSV.html#$fields">parseCSV::<var>$fields</var></a></code></code><br>field names</dd>
+					<dt><var>$append</var></dt>
+					<dd><code>append</code><br>if true, field names will not be output</dd>
+					<dt><var>$is_php</var></dt>
+					<dd><code>is_php</code><br>if a php die() call should be put on the first line of the file, this is later
+ignored when read.</dd>
+					<dt><var>$delimiter</var></dt>
+					<dd><code><code><a href="class-parseCSV.html#$delimiter">parseCSV::<var>$delimiter</var></a></code></code><br>field delimiter to use</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>CSV</code><br>data (text string)<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="load_data" id="_load_data">
+
+		<td class="attributes"><code>
+			 public 
+			true
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_load_data">#</a>
+		<code><a href="source-class-parseCSV.html#875-919" title="Go to source code">load_data</a>( <span>input <var>$input</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Load local file or string</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Load local file or string</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code>input</code><br>local CSV file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>true</code><br>or false<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_validate_row_conditions" id="__validate_row_conditions">
+
+		<td class="attributes"><code>
+			 protected 
+			true
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__validate_row_conditions">#</a>
+		<code><a href="source-class-parseCSV.html#926-963" title="Go to source code">_validate_row_conditions</a>( <span>row <var>$row</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-parseCSV.html#$conditions">parseCSV::<var>$conditions</var></a></code> <var>$conditions</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate a row against specified conditions</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate a row against specified conditions</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$row</var></dt>
+					<dd><code>row</code><br>array with values from a row</dd>
+					<dt><var>$conditions</var></dt>
+					<dd><code><code><a href="class-parseCSV.html#$conditions">parseCSV::<var>$conditions</var></a></code></code><br>specified conditions that the row must match</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>true</code><br>of false<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_validate_row_condition" id="__validate_row_condition">
+
+		<td class="attributes"><code>
+			 protected 
+			true
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__validate_row_condition">#</a>
+		<code><a href="source-class-parseCSV.html#965-1041" title="Go to source code">_validate_row_condition</a>( <span>row <var>$row</var></span>, <span>condition <var>$condition</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate a row against a single condition</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate a row against a single condition</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$row</var></dt>
+					<dd><code>row</code><br>array with values from a row</dd>
+					<dt><var>$condition</var></dt>
+					<dd><code>condition</code><br>specified condition that the row must match</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>true</code><br>of false<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_validate_offset" id="__validate_offset">
+
+		<td class="attributes"><code>
+			 protected 
+			true
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__validate_offset">#</a>
+		<code><a href="source-class-parseCSV.html#1043-1057" title="Go to source code">_validate_offset</a>( <span>current_row <var>$current_row</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validates if the row is within the offset or not if sorting is disabled</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validates if the row is within the offset or not if sorting is disabled</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$current_row</var></dt>
+					<dd><code>current_row</code><br>the current row number being processed</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>true</code><br>of false<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_enclose_value" id="__enclose_value">
+
+		<td class="attributes"><code>
+			 protected 
+			Processed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__enclose_value">#</a>
+		<code><a href="source-class-parseCSV.html#1059-1082" title="Go to source code">_enclose_value</a>( <span>value <var>$value</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$delimiter</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Enclose values if needed<br />
+- only used by unparse()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enclose values if needed - only used by unparse()</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>value</code><br>string to process</dd>
+					<dt><var>$delimiter</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Processed</code><br>value<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_check_data" id="__check_data">
+
+		<td class="attributes"><code>
+			 protected 
+			true
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__check_data">#</a>
+		<code><a href="source-class-parseCSV.html#1084-1100" title="Go to source code">_check_data</a>( <span><code><a href="class-parseCSV.html#$file">parseCSV::<var>$file</var></a></code> <var>$file</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Check file data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check file data</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code><code><a href="class-parseCSV.html#$file">parseCSV::<var>$file</var></a></code></code><br>local filename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>true</code><br>or false<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_check_count" id="__check_count">
+
+		<td class="attributes"><code>
+			 protected 
+			special
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__check_count">#</a>
+		<code><a href="source-class-parseCSV.html#1102-1146" title="Go to source code">_check_count</a>( <span>[type] <var>$char</var></span>, <span>[type] <var>$array</var></span>, <span>[type] <var>$depth</var></span>, <span>[type] <var>$preferred</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if passed info might be delimiter Only used by find_delimiter</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if passed info might be delimiter Only used by find_delimiter</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$char</var></dt>
+					<dd><code>[type]</code><br>$char [description]</dd>
+					<dt><var>$array</var></dt>
+					<dd><code>[type]</code><br>$array [description]</dd>
+					<dt><var>$depth</var></dt>
+					<dd><code>[type]</code><br>$depth [description]</dd>
+					<dt><var>$preferred</var></dt>
+					<dd><code>[type]</code><br>$preferred [description]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>special</code><br>string used for delimiter selection, or false<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_rfile" id="__rfile">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-Data.html">Data</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__rfile">#</a>
+		<code><a href="source-class-parseCSV.html#1148-1168" title="Go to source code">_rfile</a>( <span><code><a href="class-parseCSV.html#$file">parseCSV::<var>$file</var></a></code> <var>$file</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Read local file</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read local file</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code><code><a href="class-parseCSV.html#$file">parseCSV::<var>$file</var></a></code></code><br>local filename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Data.html">Data</a></code></code><br>from file, or false on failure<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_wfile" id="__wfile">
+
+		<td class="attributes"><code>
+			 protected 
+			true
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__wfile">#</a>
+		<code><a href="source-class-parseCSV.html#1170-1192" title="Go to source code">_wfile</a>( <span><code><a href="class-parseCSV.html#$file">parseCSV::<var>$file</var></a></code> <var>$file</var></span>, <span>string <var>$string</var> = <span class="php-quote">''</span></span>, <span>mode <var>$mode</var> = <span class="php-quote">'wb'</span></span>, <span>lock <var>$lock</var> = <span class="php-num">2</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Write to local file</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Write to local file</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code><code><a href="class-parseCSV.html#$file">parseCSV::<var>$file</var></a></code></code><br>local filename</dd>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>data to write to file</dd>
+					<dt><var>$mode</var></dt>
+					<dd><code>mode</code><br>fopen() mode</dd>
+					<dt><var>$lock</var></dt>
+					<dd><code>lock</code><br>flock() mode</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>true</code><br>or false<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="heading" id="$heading">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#82-89" title="Go to source code"><var>$heading</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$heading" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Heading Use first line/entry as field names</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Heading Use first line/entry as field names</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="fields" id="$fields">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#91-98" title="Go to source code"><var>$fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Fields Override field names</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Fields Override field names</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="sort_by" id="$sort_by">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#100-107" title="Go to source code"><var>$sort_by</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$sort_by" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Sort By Sort csv by this field</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sort By Sort csv by this field</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="sort_reverse" id="$sort_reverse">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#109-116" title="Go to source code"><var>$sort_reverse</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$sort_reverse" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Sort Reverse Reverse the sort function</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sort Reverse Reverse the sort function</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="sort_type" id="$sort_type">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#118-129" title="Go to source code"><var>$sort_type</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$sort_type" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Sort Type Sort behavior passed to sort methods</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sort Type Sort behavior passed to sort methods</p>
+
+<p>regular = SORT_REGULAR numeric = SORT_NUMERIC string = SORT_STRING</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="delimiter" id="$delimiter">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#131-138" title="Go to source code"><var>$delimiter</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">','</span></code></td>
+		<td class="description"><div>
+			<a href="#$delimiter" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Delimiter Delimiter character</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Delimiter Delimiter character</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="enclosure" id="$enclosure">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#140-147" title="Go to source code"><var>$enclosure</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'&quot;'</span></code></td>
+		<td class="description"><div>
+			<a href="#$enclosure" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Enclosure Enclosure character</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Enclosure Enclosure character</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="enclose_all" id="$enclose_all">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#149-156" title="Go to source code"><var>$enclose_all</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$enclose_all" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Enclose All Force enclosing all columns</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Enclose All Force enclosing all columns</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="conditions" id="$conditions">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#158-165" title="Go to source code"><var>$conditions</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$conditions" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Conditions Basic SQL-Like conditions for row matching</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Conditions Basic SQL-Like conditions for row matching</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="offset" id="$offset">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#167-174" title="Go to source code"><var>$offset</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$offset" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Offset Number of rows to ignore from beginning of data</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Offset Number of rows to ignore from beginning of data</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="limit" id="$limit">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#176-183" title="Go to source code"><var>$limit</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$limit" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Limit Limits the number of returned rows to the specified amount</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Limit Limits the number of returned rows to the specified amount</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="auto_depth" id="$auto_depth">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#185-192" title="Go to source code"><var>$auto_depth</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">15</span></code></td>
+		<td class="description"><div>
+			<a href="#$auto_depth" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Auto Depth Number of rows to analyze when attempting to auto-detect
+delimiter</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Auto Depth Number of rows to analyze when attempting to auto-detect
+delimiter</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="auto_non_chars" id="$auto_non_chars">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#194-201" title="Go to source code"><var>$auto_non_chars</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">&quot;a-zA-Z0-9\n\r&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#$auto_non_chars" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Auto Non Charts Characters that should be ignored when attempting to
+auto-detect delimiter</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Auto Non Charts Characters that should be ignored when attempting to
+auto-detect delimiter</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="auto_preferred" id="$auto_preferred">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#203-211" title="Go to source code"><var>$auto_preferred</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">&quot;,;\t.:|&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#$auto_preferred" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Auto Preferred preferred delimiter characters, only used when all filtering
+method returns multiple possible delimiters (happens very rarely)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Auto Preferred preferred delimiter characters, only used when all filtering
+method returns multiple possible delimiters (happens very rarely)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="convert_encoding" id="$convert_encoding">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#213-220" title="Go to source code"><var>$convert_encoding</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$convert_encoding" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Convert Encoding Should we convert the csv encoding?</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Convert Encoding Should we convert the csv encoding?</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="input_encoding" id="$input_encoding">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#222-229" title="Go to source code"><var>$input_encoding</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'ISO-8859-1'</span></code></td>
+		<td class="description"><div>
+			<a href="#$input_encoding" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Input Encoding Set the input encoding</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Input Encoding Set the input encoding</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="output_encoding" id="$output_encoding">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#231-238" title="Go to source code"><var>$output_encoding</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'ISO-8859-1'</span></code></td>
+		<td class="description"><div>
+			<a href="#$output_encoding" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Output Encoding Set the output encoding</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Output Encoding Set the output encoding</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="linefeed" id="$linefeed">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#240-247" title="Go to source code"><var>$linefeed</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">&quot;\r&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#$linefeed" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Linefeed Line feed characters used by unparse, save, and output methods</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Linefeed Line feed characters used by unparse, save, and output methods</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="output_delimiter" id="$output_delimiter">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#249-256" title="Go to source code"><var>$output_delimiter</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">','</span></code></td>
+		<td class="description"><div>
+			<a href="#$output_delimiter" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Output Delimiter Sets the output delimiter used by the output method</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Output Delimiter Sets the output delimiter used by the output method</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="output_filename" id="$output_filename">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#258-265" title="Go to source code"><var>$output_filename</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'data.csv'</span></code></td>
+		<td class="description"><div>
+			<a href="#$output_filename" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Output filename Sets the output filename</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Output filename Sets the output filename</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="keep_file_data" id="$keep_file_data">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#267-274" title="Go to source code"><var>$keep_file_data</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$keep_file_data" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Keep File Data keep raw file data in memory after successful parsing (useful
+for debugging)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Keep File Data keep raw file data in memory after successful parsing (useful
+for debugging)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="file" id="$file">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#280-287" title="Go to source code"><var>$file</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$file" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>File Current Filename</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>File Current Filename</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="file_data" id="$file_data">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#289-296" title="Go to source code"><var>$file_data</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$file_data" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>File Data Current file data</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>File Data Current file data</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="error" id="$error">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#298-313" title="Go to source code"><var>$error</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$error" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Error Contains the error code if one occured</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Error Contains the error code if one occured</p>
+
+<p>0 = No errors found. Everything should be fine :) 1 = Hopefully correctable
+syntax error was found. 2 = Enclosure character (double quote by default) was
+found in non-enclosed field. This means the file is either corrupt, or does not
+standard CSV formatting. Please validate the parsed data yourself.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="error_info" id="$error_info">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#315-322" title="Go to source code"><var>$error_info</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$error_info" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Error Information Detailed error information</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Error Information Detailed error information</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="titles" id="$titles">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#324-331" title="Go to source code"><var>$titles</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$titles" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Titles CSV titles if they exists</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Titles CSV titles if they exists</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="data" id="$data">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-parseCSV.html#333-340" title="Go to source code"><var>$data</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$data" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Data Two dimensional array of CSV data</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Data Two dimensional array of CSV data</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		dataQuality API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
