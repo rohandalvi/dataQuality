@@ -37,12 +37,52 @@ class Accerlerometer extends Sensor {
     
     function __construct($data) {
         parent::__construct($data);
+        $this->data = $data;
     }
     
     function __destruct() {
         parent::__destruct();
     }
     
+    public function getAccuracy() {
+        parent::getAccuracy();
+        
+        $percentAccuracy = 100; //Set this value to 100 initially, decrement it gradually.
+        
+        /*
+         * Get Accuracy from manufacturer information
+         */
+    }
+    
+    /*
+     * Get non-uni percentage.
+     *  
+     */
+    public function getUniqueness() {
+        parent::getUniqueness();
+        //echo "ORIGINAL ".count($this->data);
+        
+        $lines = array();
+        for($i=0;$i<count($this->data);$i++){
+            $line1 = join(",", $this->data[$i]);
+            for($j=0;$j<count($this->data);$j++){
+                if($i!=$j){
+                    $line2 = join(",", $this->data[$j]);
+                    //echo "Uniqueness measure ".$this->testUniqueness($line1, $line2)."\n";
+                    if($this->testUniqueness($line1, $line2)<95){
+                       // echo "Distinct ".$line1."\n";
+                       $lines[$line1] = true; 
+                    }
+                }
+            }
+        }
+        
+        //echo "MODIFIED ".count($lines);
+        $count = array_count_values($this->data[0]);
+        
+        return ($count/count($this->data[0]))*100;
+        
+    }
     /*
      * Return percentage of missing values
      */
@@ -57,10 +97,11 @@ class Accerlerometer extends Sensor {
                     $countMissing++;
                 }
             }
-            
             $percentMissing = ($countMissing/(count($this->data)*3))*100;
             return $percentMissing;
         }
     }
+    
+    
     
 }
