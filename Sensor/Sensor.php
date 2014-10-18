@@ -15,9 +15,9 @@ include_once '../importData/csvImport.php';
 class Sensor {
     
     
-    protected $data;
-    function __construct($data) {
-        
+    protected $fileName;
+    function __construct($file) {
+        $this->fileName = $file;
     }
     
     function __destruct() {
@@ -33,6 +33,11 @@ class Sensor {
         "pressure" => "4",
         "temperature" => "5"
     );
+	
+	public function getSensorType(){
+		$csv = new csvImport($this->fileName);
+		return $csv->getSensorType();
+	}
     
     /*
      * This function gives accuracy of data supplied.

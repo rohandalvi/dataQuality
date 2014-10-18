@@ -11,10 +11,13 @@ class csvImport {
 
     //Class to import csv files containing sensor data into 
     private $nameFile;
-    private $dataArray=[];
+    private $dataArray=array();
     private $fileObject;
     private $csv=null;
-
+	private static $defaultFileName = "file.csv";
+	function __construct(){
+		
+	}
     function __construct($filename) {
         if (file_exists($filename)) {
 
@@ -30,7 +33,7 @@ class csvImport {
 
     public function __destruct() {
         $this->nameFile = null;
-        $this->dataArray = [];
+        $this->dataArray = array();
         $this->fileObject=null;
         $this->csv=null;
     }
@@ -42,6 +45,23 @@ class csvImport {
         }
        
     }
+	
+	/*
+	 * Returns sensor type as provided in the csv file.
+	 * 
+	 * Name: getSensorType()
+	 * 
+	 * input: *none*;
+	 * 
+	 * returns: type of sensor
+	 * 
+	 * Exception: *None*;
+	 */
+	 
+	public function getSensorType(){
+		if($this->dataArray==null) $this->readCSV($filename, null);
+		return $this->dataArray[1]["SensorType"];
+	}
 
     public function countRecords() {
         return count($this->fileObject);

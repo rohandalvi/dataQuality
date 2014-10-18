@@ -1,5 +1,5 @@
 <?php
-
+include_once 'Accelerometer.php';
 /*
  * The MIT License
  *
@@ -29,7 +29,7 @@
  *
  * @author rohandalvi
  */
-class Data {
+class Data extends  Sensor {
     //put your code here
     
     private $percentUnique;
@@ -38,7 +38,7 @@ class Data {
     private $percentValid;
     private $percentAccuracy;
     private $percentConsistency;
-    private $data=[];
+    private $data= array();
     
     function __construct($data){
         $this->data = $data;
@@ -53,12 +53,46 @@ class Data {
     }
     
     public function calculateUniqueness(){
-        echo $data;
+        parent::getUniqueness();
+        //echo "ORIGINAL ".count($this->data);
+        
+        $lines = array();
+        for($i=0;$i<count($this->data);$i++){
+            $line1 = join(",", $this->data[$i]);
+            for($j=0;$j<count($this->data);$j++){
+                if($i!=$j){
+                    $line2 = join(",", $this->data[$j]);
+                    //echo "Uniqueness measure ".$this->testUniqueness($line1, $line2)."\n";
+                    if($this->testUniqueness($line1, $line2)<95){
+                       // echo "Distinct ".$line1."\n";
+                       $lines[$line1] = true; 
+                    }
+                }
+            }
+        }
+        
+        //echo "MODIFIED ".count($lines);
+        $count = array_count_values($this->data[0]);
+        
+        return ($count/count($this->data[0]))*100;
+        
         
     }
     
     public function calculateCompleteness(){
-        
+        parent::getMissingValues();
+        $percentMissing=0;
+        if(count($this->data)==0) return 0;
+        else{
+            $countMissing = 0;
+            for($i=0;$i<count($this->data);$i++){
+                if(isMissing($this->data[$i]["x"]) || isMissing($this->data[$i]["y"]) || isMissing($this->data[$i]["z"])){
+                    $countMissing++;
+                }
+            }
+            $percentMissing = ($countMissing/(count($this->data)*3))*100;
+            return $percentMissing;
+        }
     }
     
     public function calculateTimeliness(){
@@ -66,11 +100,34 @@ class Data {
     }
     
     public function calculateValidity(){
-        
+        $sensorType = $this->getSensorType();
+		
+		switch($sensorType){
+			case 'ACCELEROMETER': /*
+			 * create new accelerometer object 
+			 */
+			$count = 0; 
+			$accelerometer = new Accelerometer();
+			for($i=0;$i<count($this->data);$i++){
+				$xValue = $this->data[$i]["x"];
+				$yValue = $this->data[$i]["y"];
+				$zValue = $this->data[$i]["z"];
+				
+				if($xValue<$accelerometer->getXMin() && $xValue>getXMax()){$count++;}
+				if($yValue<$accelerometer->getYMin() && $yValue>getYMax()){$count++;}
+				if($zValue<$accelerometer->getZMin() && $zValue>getZMax()){$count++;}
+			}
+				break;
+				
+				
+			case 'GRAVITY':
+				
+				break;
+		}
     }
     
     public function calculateAccuracy(){
-        
+        //get sensor accuracy from metadata
     }
     
     public function calculateConsistency(){
