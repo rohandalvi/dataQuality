@@ -37,7 +37,13 @@ class csvImport {
         $this->fileObject=null;
         $this->csv=null;
     }
-
+/*
+ * Name: readCSV()
+ * 
+ * returns: *none*
+ * 
+ * input: *filename*
+ */
     public function readCSV($filename, $optional_var) {
 
         if($this->csv!=null){
@@ -62,7 +68,10 @@ class csvImport {
 		if($this->dataArray==null) $this->readCSV($filename, null);
 		return $this->dataArray[1]["SensorType"];
 	}
-
+	public function getPhoneType(){
+		if($this->dataArray==null) $this->readCSV($filename, null);
+		return $this->dataArray[1]["PhoneType"];
+	}
     public function countRecords() {
         return count($this->fileObject);
     }

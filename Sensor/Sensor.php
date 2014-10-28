@@ -39,6 +39,11 @@ class Sensor {
 		return $csv->getSensorType();
 	}
     
+	public function getPhoneType(){
+		$csv = new csvImport($this->fileName);
+		return $csv->getPhoneType();
+	}
+	
     /*
      * This function gives accuracy of data supplied.
      * 

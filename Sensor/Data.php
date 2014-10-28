@@ -121,7 +121,19 @@ class Data extends  Sensor {
 				
 				
 			case 'GRAVITY':
+				//create new gravity object
+				$count=0;
+				$gravity = new Gravity();
 				
+				for($i=0;$i<count($this->data);$i++){
+				$xValue = $this->data[$i]["x"];
+				$yValue = $this->data[$i]["y"];
+				$zValue = $this->data[$i]["z"];
+				
+				if($xValue<$gravity->getXMin() && $xValue>$gravity->getXMax()){$count++;}
+				if($yValue<$gravity->getYMin() && $yValue>$gravity->getYMax()){$count++;}
+				if($zValue<$gravity->getZMin() && $zValue>$gravity->getZMax()){$count++;}
+				}
 				break;
 		}
     }
