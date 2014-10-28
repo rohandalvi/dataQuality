@@ -39,9 +39,11 @@ class Data extends  Sensor {
     private $percentAccuracy;
     private $percentConsistency;
     private $data= array();
+	private $fields = array();
     
     function __construct($data){
         $this->data = $data;
+		$this->fields = $this->getSensorFields();
     }
     
     function __destruct(){
@@ -78,17 +80,20 @@ class Data extends  Sensor {
         
         
     }
+	
     
     public function calculateCompleteness(){
         parent::getMissingValues();
+		$fields = array();
         $percentMissing=0;
         if(count($this->data)==0) return 0;
         else{
             $countMissing = 0;
             for($i=0;$i<count($this->data);$i++){
-                if(isMissing($this->data[$i]["x"]) || isMissing($this->data[$i]["y"]) || isMissing($this->data[$i]["z"])){
-                    $countMissing++;
-                }
+            	foreach ($this->fields as $field){
+            		if(isMissing($this->data[$i][$field])) $countMissing++;
+            	}
+                
             }
             $percentMissing = ($countMissing/(count($this->data)*3))*100;
             return $percentMissing;
@@ -133,6 +138,21 @@ class Data extends  Sensor {
 				if($xValue<$gravity->getXMin() && $xValue>$gravity->getXMax()){$count++;}
 				if($yValue<$gravity->getYMin() && $yValue>$gravity->getYMax()){$count++;}
 				if($zValue<$gravity->getZMin() && $zValue>$gravity->getZMax()){$count++;}
+				}
+				break;
+				
+			case 'GYROSCOPE':
+				$count=0;
+				$gyroscope = new Gyroscope();
+				
+				for($i=0;$i<count($this->data);$i++){
+				$xValue = $this->data[$i]["x"];
+				$yValue = $this->data[$i]["y"];
+				$zValue = $this->data[$i]["z"];
+				
+				if($xValue<$gyroscope->getXMin() && $xValue>$gyroscope->getXMax()){$count++;}
+				if($yValue<$gyroscope->getYMin() && $yValue>$gyroscope->getYMax()){$count++;}
+				if($zValue<$gyroscope->getZMin() && $zValue>$gyroscope->getZMax()){$count++;}
 				}
 				break;
 		}

@@ -16,8 +16,10 @@ class Sensor {
     
     
     protected $fileName;
+	public $csv;
     function __construct($file) {
         $this->fileName = $file;
+		$csv = new csvImport($this->fileName);
     }
     
     function __destruct() {
@@ -35,13 +37,18 @@ class Sensor {
     );
 	
 	public function getSensorType(){
-		$csv = new csvImport($this->fileName);
-		return $csv->getSensorType();
+		
+		return $this->csv->getSensorType();
 	}
     
 	public function getPhoneType(){
-		$csv = new csvImport($this->fileName);
-		return $csv->getPhoneType();
+		
+		return $this->csv->getPhoneType();
+	}
+	
+	public function getSensorFields(){
+		
+		return $this->csv->getFieldNames();
 	}
 	
     /*
